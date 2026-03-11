@@ -1,7 +1,7 @@
 package Leetcode.Arrays;
 import java.util.HashMap;
 
-public class Twosum {
+class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -12,5 +12,14 @@ public class Twosum {
             map.put(nums[i], i);
         }
         return new int[]{};
+    }
+     public static void main(String[] args) {
+        TwoSum obj = new TwoSum();
+        int[] nums = {3,2,4};
+        int target = 6;
+
+        int[] result = obj.twoSum(nums, target);
+
+        System.out.println(result[0] + " " + result[1]);
     }
 }
